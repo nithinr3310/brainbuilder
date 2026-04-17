@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Builders - CBSE Tuition Classes 10, 11, 12</title>
+    <meta name="description" content="Brain Builders - Premium CBSE tuition for Classes 10, 11, 12. Maths, Science, Physics. Building strong concepts and academic excellence.">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <span>Brain Builders</span>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" data-link="home">Home</a></li>
+                    <li><a href="#programs" data-link="programs">Programs</a></li>
+                    <li><a href="#faculty" data-link="faculty">Faculty</a></li>
+                    <li><a href="#features" data-link="features">Features</a></li>
+                    <li><a href="#reviews" data-link="reviews">Reviews</a></li>
+                    <li><a href="#contact" data-link="contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="animate-fade-in">
+                    Brain Builders
+                </h1>
+                <p class="hero-subtitle animate-fade-in" style="animation-delay: 0.2s;">
+                    Admissions Open – CBSE Classes 10, 11 & 12
+                </p>
+                <p class="hero-tagline animate-fade-in" style="animation-delay: 0.4s;">
+                    Building strong concepts and academic excellence
+                </p>
+                <button class="btn btn-primary animate-fade-in" style="animation-delay: 0.6s;" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                    Enroll Now
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            
+            <div class="hero-image animate-fade-in" style="animation-delay: 0.3s;">
+                <div class="illustration">
+                    <div class="student-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="books-floating">
+                        <i class="fas fa-book"></i>
+                        <i class="fas fa-book"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Programs</h2>
+                <p>Comprehensive CBSE curriculum for academic excellence</p>
+            </div>
+
+            <div class="programs-grid">
+                <div class="program-card" style="animation-delay: 0.1s;">
+                    <div class="program-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Class 10</h3>
+                    <p>Foundation Building</p>
+                    <ul class="program-subjects">
+                        <li><i class="fas fa-check"></i> Mathematics</li>
+                        <li><i class="fas fa-check"></i> Science</li>
+                    </ul>
+                </div>
+
+                <div class="program-card" style="animation-delay: 0.2s;">
+                    <div class="program-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Class 11</h3>
+                    <p>Stream Selection & Focus</p>
+                    <ul class="program-subjects">
+                        <li><i class="fas fa-check"></i> Mathematics</li>
+                        <li><i class="fas fa-check"></i> Physics</li>
+                    </ul>
+                </div>
+
+                <div class="program-card" style="animation-delay: 0.3s;">
+                    <div class="program-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Class 12</h3>
+                    <p>Board Preparation & Beyond</p>
+                    <ul class="program-subjects">
+                        <li><i class="fas fa-check"></i> Mathematics</li>
+                        <li><i class="fas fa-check"></i> Physics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty" class="faculty">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Faculty</h2>
+                <p>Experienced educators dedicated to student success</p>
+            </div>
+
+            <div class="faculty-grid">
+                <div class="faculty-card" style="animation-delay: 0.1s;">
+                    <div class="faculty-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Dr. Rajesh Kumar</h3>
+                        <p class="qualification">M.Sc Physics, B.Ed</p>
+                        <p class="experience"><i class="fas fa-briefcase"></i> 12 years experience</p>
+                        <p class="subject-taught">Physics, Mathematics</p>
+                    </div>
+                </div>
+
+                <div class="faculty-card" style="animation-delay: 0.2s;">
+                    <div class="faculty-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Priya Sharma</h3>
+                        <p class="qualification">M.Sc Mathematics, B.Ed</p>
+                        <p class="experience"><i class="fas fa-briefcase"></i> 10 years experience</p>
+                        <p class="subject-taught">Mathematics, Concepts</p>
+                    </div>
+                </div>
+
+                <div class="faculty-card" style="animation-delay: 0.3s;">
+                    <div class="faculty-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Amit Patel</h3>
+                        <p class="qualification">M.Sc Science, B.Ed</p>
+                        <p class="experience"><i class="fas fa-briefcase"></i> 8 years experience</p>
+                        <p class="subject-taught">Science, Chemistry</p>
+                    </div>
+                </div>
+
+                <div class="faculty-card" style="animation-delay: 0.4s;">
+                    <div class="faculty-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Ananya Desai</h3>
+                        <p class="qualification">M.Sc Physics, B.Ed</p>
+                        <p class="experience"><i class="fas fa-briefcase"></i> 11 years experience</p>
+                        <p class="subject-taught">Physics, Advanced Concepts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Brain Builders?</h2>
+                <p>Excellence through proven methods and dedication</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item" style="animation-delay: 0.1s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Concept-Based Learning</h3>
+                    <p>Strong foundation through interactive and engaging concept-based teaching methodology</p>
+                </div>
+
+                <div class="feature-item" style="animation-delay: 0.2s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Regular Tests & Tracking</h3>
+                    <p>Weekly assessments and progress tracking to monitor student development</p>
+                </div>
+
+                <div class="feature-item" style="animation-delay: 0.3s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Individual Attention</h3>
+                    <p>Small batch sizes ensure personalized attention and doubt resolution</p>
+                </div>
+
+                <div class="feature-item" style="animation-delay: 0.4s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>15+ Years Experience</h3>
+                    <p>Proven track record of helping students achieve excellent results</p>
+                </div>
+
+                <div class="feature-item" style="animation-delay: 0.5s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>CBSE-Focused</h3>
+                    <p>Curriculum aligned with CBSE board standards and exam patterns</p>
+                </div>
+
+                <div class="feature-item" style="animation-delay: 0.6s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Proven Results</h3>
+                    <p>Consistently high scores and success rate among our students</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>Student & Parent Reviews</h2>
+                <p>Hear from our satisfied community</p>
+            </div>
+
+            <div class="reviews-grid" id="reviewsContainer">
+                <!-- Reviews will be loaded dynamically from backend -->
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner"></i>
+                </div>
+            </div>
+
+            <div class="add-review-container">
+                <button class="btn btn-secondary" onclick="document.getElementById('addReviewForm').scrollIntoView({behavior: 'smooth'}); openReviewForm()">
+                    <i class="fas fa-pen"></i> Share Your Review
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Join Brain Builders and excel in your studies</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-item" style="animation-delay: 0.1s;">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Phone</h3>
+                            <p>+91 98765 43210</p>
+                            <p>+91 87654 32109</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item" style="animation-delay: 0.2s;">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Location</h3>
+                            <p>123 Education Street</p>
+                            <p>Mumbai, Maharashtra 400001</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item" style="animation-delay: 0.3s;">
+                        <div class="info-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-link">Chat with us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="contactName" placeholder="Your Name" required>
+                        <span class="form-error" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <select id="contactClass" required>
+                            <option value="">Select Class</option>
+                            <option value="10">Class 10</option>
+                            <option value="11">Class 11</option>
+                            <option value="12">Class 12</option>
+                        </select>
+                        <span class="form-error" id="classError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" id="contactPhone" placeholder="Phone Number" required>
+                        <span class="form-error" id="phoneError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <span>Submit Application</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Review Form Modal -->
+    <div class="modal" id="addReviewModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeReviewForm()">&times;</button>
+            <h2>Share Your Experience</h2>
+            
+            <form id="addReviewForm" class="review-form">
+                <div class="form-group">
+                    <input type="text" id="reviewName" placeholder="Your Name" required>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="reviewText" placeholder="Tell us about your experience..." rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Rating</label>
+                    <div class="rating-input">
+                        <input type="radio" name="rating" value="5" id="star5"> <label for="star5"><i class="fas fa-star"></i></label>
+                        <input type="radio" name="rating" value="4" id="star4"> <label for="star4"><i class="fas fa-star"></i></label>
+                        <input type="radio" name="rating" value="3" id="star3"> <label for="star3"><i class="fas fa-star"></i></label>
+                        <input type="radio" name="rating" value="2" id="star2"> <label for="star2"><i class="fas fa-star"></i></label>
+                        <input type="radio" name="rating" value="1" id="star1"> <label for="star1"><i class="fas fa-star"></i></label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Review</button>
+                <div class="form-message" id="reviewMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Chatbot Placeholder -->
+    <div class="chatbot-placeholder" id="chatbotPlaceholder">
+        <div class="chatbot-icon">
+            <i class="fas fa-comments"></i>
+        </div>
+        <span>Chat Support</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Brain Builders</h4>
+                    <p>Premium CBSE tuition for Classes 10, 11, and 12.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#faculty">Faculty</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>+91 98765 43210</p>
+                    <p>info@brainbuilders.edu</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Brain Builders. All rights reserved. | Building strong concepts and academic excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

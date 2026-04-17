@@ -1,0 +1,516 @@
+/* Responsive Design */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        gap: 0;
+        list-style: none;
+        box-shadow: var(--shadow-md);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translateY(10px);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-10px);
+    }
+
+    /* Hero Section */
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-tagline {
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        margin-top: 2rem;
+    }
+
+    .illustration {
+        width: 250px;
+        height: 300px;
+    }
+
+    .student-icon {
+        font-size: 6rem;
+    }
+
+    /* Programs Section */
+    .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Faculty Section */
+    .faculty-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Features Section */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .feature-item {
+        padding: 1.5rem;
+    }
+
+    /* Contact Section */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Section Headers */
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.95rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Navigation */
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo i {
+        font-size: 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        margin-top: 60px;
+        min-height: 80vh;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-tagline {
+        font-size: 0.9rem;
+    }
+
+    .illustration {
+        width: 200px;
+        height: 250px;
+    }
+
+    .student-icon {
+        font-size: 4rem;
+    }
+
+    .books-floating i {
+        font-size: 1.2rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Programs Section */
+    .programs {
+        padding: 3rem 0;
+    }
+
+    .program-card {
+        padding: 1.5rem;
+    }
+
+    .program-icon {
+        font-size: 2.5rem;
+    }
+
+    .program-card h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Faculty Section */
+    .faculty {
+        padding: 3rem 0;
+    }
+
+    .faculty-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .faculty-image {
+        height: 150px;
+    }
+
+    .image-placeholder {
+        font-size: 3rem;
+    }
+
+    .faculty-info {
+        padding: 1rem;
+    }
+
+    .faculty-info h3 {
+        font-size: 1rem;
+    }
+
+    .qualification,
+    .experience,
+    .subject-taught {
+        font-size: 0.8rem;
+    }
+
+    /* Features Section */
+    .features {
+        padding: 3rem 0;
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+    }
+
+    .feature-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .feature-item p {
+        font-size: 0.9rem;
+    }
+
+    /* Reviews Section */
+    .reviews {
+        padding: 3rem 0;
+    }
+
+    .reviews-grid {
+        gap: 1rem;
+    }
+
+    .review-card {
+        padding: 1.5rem;
+    }
+
+    .review-text {
+        font-size: 0.9rem;
+    }
+
+    /* Contact Section */
+    .contact {
+        padding: 3rem 0;
+    }
+
+    .contact-info {
+        gap: 1.5rem;
+    }
+
+    .info-item {
+        gap: 1rem;
+    }
+
+    .info-icon {
+        font-size: 1.5rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .modal-content h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .review-form {
+        gap: 1rem;
+    }
+
+    .rating-input label {
+        font-size: 1.5rem;
+    }
+
+    /* Chatbot */
+    .chatbot-placeholder {
+        width: 50px;
+        height: 50px;
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .chatbot-placeholder i {
+        font-size: 1.5rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 2rem 0 0.5rem;
+    }
+
+    .footer-content {
+        gap: 1rem;
+    }
+
+    .footer-section h4 {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 0.85rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+        padding-top: 1rem;
+    }
+
+    /* Section Headers */
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-header p {
+        font-size: 0.9rem;
+    }
+
+    /* Animations for smaller screens */
+    .animate-fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    /* Hero shapes */
+    .shape-1 {
+        width: 250px;
+        height: 250px;
+        top: -50px;
+        right: -50px;
+    }
+
+    .shape-2 {
+        width: 200px;
+        height: 200px;
+        bottom: -30px;
+        left: -30px;
+    }
+}
+
+/* Small Mobile (360px and below) */
+@media (max-width: 360px) {
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hero-tagline {
+        font-size: 0.8rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .section-header p {
+        font-size: 0.85rem;
+    }
+
+    .program-card h3,
+    .feature-item h3 {
+        font-size: 1rem;
+    }
+
+    .program-card p,
+    .feature-item p {
+        font-size: 0.85rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Large screens (1400px and above) */
+@media (min-width: 1400px) {
+    .hero-text h1 {
+        font-size: 4rem;
+    }
+
+    .section-header h2 {
+        font-size: 3rem;
+    }
+
+    .programs-grid,
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    .faculty-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .chatbot-placeholder,
+    .btn-secondary {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    a {
+        color: black;
+    }
+
+    .hero,
+    .programs,
+    .faculty,
+    .features,
+    .reviews,
+    .contact {
+        page-break-inside: avoid;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Dark Mode (optional) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --white: #1a1a1a;
+        --light-bg: #2a2a2a;
+        --text-dark: #e0e0e0;
+        --text-light: #b0b0b0;
+        --border-color: #3a3a3a;
+    }
+
+    .navbar {
+        background: rgba(26, 26, 26, 0.95);
+    }
+
+    .hero {
+        background: linear-gradient(135deg, rgba(0, 123, 255, 0.1) 0%, rgba(0, 123, 255, 0.05) 100%);
+    }
+
+    .program-card,
+    .faculty-card,
+    .review-card {
+        background: #2a2a2a;
+    }
+
+    .contact-form {
+        background: linear-gradient(135deg, rgba(0, 123, 255, 0.15), rgba(0, 123, 255, 0.1));
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        background: #3a3a3a;
+        color: #e0e0e0;
+    }
+
+    .modal-content {
+        background: #2a2a2a;
+    }
+}
