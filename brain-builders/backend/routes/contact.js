@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Contact = require('../models/Contact');
+const { sendContactNotification } = require('../services/emailService');
 
 // POST /api/contact - Save contact form data
 router.post('/', async (req, res) => {
@@ -19,6 +20,14 @@ router.post('/', async (req, res) => {
     });
 
     const savedContact = await contact.save();
+    
+    // Send email notification to admin
+    await sendContactNotification({
+      name: savedContact.name,
+      class: savedContact.class,
+      phone: savedContact.phone
+    });
+    
     res.status(201).json({ message: 'Contact saved successfully!', data: savedContact });
   } catch (error) {
     res.status(500).json({ error: 'Failed to save contact', message: error.message });

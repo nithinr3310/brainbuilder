@@ -1,0 +1,23 @@
+
+> brain-builders-backend@1.0.0 dev
+> nodemon server.js
+
+[33m[nodemon] 3.1.14[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node server.js`[39m
+Server running on port 3001
+MongoDB connected
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `node server.js`[39m
+Server running on port 3001
+MongoDB connected
+📧 Sending email notification for: John Doe Test
+   To: brainbuilder.in@gmail.com
+   From: brainbuilder.in@gmail.com
+✅ Email sent successfully! Message ID: <6a7c65df-52fa-9dfe-4262-405cd2c260df@gmail.com>
+📧 Sending email notification for: Vishwa
+   To: brainbuilder.in@gmail.com
+   From: brainbuilder.in@gmail.com
+✅ Email sent successfully! Message ID: <de579a39-b796-d623-cf33-78b25d1aa283@gmail.com>
