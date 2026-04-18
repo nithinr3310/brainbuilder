@@ -14,6 +14,19 @@
     
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Theme restore: must run before paint to avoid flash -->
+    <script>
+        (function() {
+            if (localStorage.getItem('theme') === 'light') {
+                document.documentElement.classList.add('light-mode-pending');
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.body.classList.add('light-mode');
+                    document.documentElement.classList.remove('light-mode-pending');
+                });
+            }
+        })();
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -39,6 +52,10 @@
                     <li><a href="#reviews" data-link="reviews">Reviews</a></li>
                     <li><a href="#contact" data-link="contact">Contact</a></li>
                 </ul>
+
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+                    <i class="fas fa-sun" id="themeIcon"></i>
+                </button>
             </div>
         </div>
     </nav>
@@ -166,33 +183,7 @@
                     </div>
                 </div>
 
-                <div class="faculty-card" style="animation-delay: 0.3s;">
-                    <div class="faculty-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
-                    <div class="faculty-info">
-                        <h3>Amit Patel</h3>
-                        <p class="qualification">M.Sc Science, B.Ed</p>
-                        <p class="experience"><i class="fas fa-briefcase"></i> 8 years experience</p>
-                        <p class="subject-taught">Science, Chemistry</p>
-                    </div>
-                </div>
-
-                <div class="faculty-card" style="animation-delay: 0.4s;">
-                    <div class="faculty-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
-                    <div class="faculty-info">
-                        <h3>Ananya Desai</h3>
-                        <p class="qualification">M.Sc Physics, B.Ed</p>
-                        <p class="experience"><i class="fas fa-briefcase"></i> 11 years experience</p>
-                        <p class="subject-taught">Physics, Advanced Concepts</p>
-                    </div>
-                </div>
+                <!-- Only 2 faculty profiles displayed -->
             </div>
         </div>
     </section>
