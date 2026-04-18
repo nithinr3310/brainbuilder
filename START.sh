@@ -16,11 +16,12 @@ cd brain-builders/backend
 npm run dev &
 BACKEND_PID=$!
 
-sleep 2
+sleep 4
 
 # Check if backend started successfully
-if ! lsof -Pi :3001 -sTCP:LISTEN -t >/dev/null ; then
+if ! curl -s http://localhost:3001 > /dev/null 2>&1; then
     echo "❌ Backend failed to start on port 3001"
+    kill $BACKEND_PID 2>/dev/null
     exit 1
 fi
 
