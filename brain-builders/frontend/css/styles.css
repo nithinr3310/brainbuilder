@@ -1,9 +1,37 @@
-/* Root Variables */
+/* Root Variables — Dark Mode (default) */
 :root {
+    --primary-color: #4da6ff;
+    --secondary-color: #1a7de8;
+    --accent-color: rgba(77, 166, 255, 0.12);
+    --white: #111827;           /* page/section background */
+    --true-white: #ffffff;      /* always-white: used for button text, footer text */
+    --light-bg: #1f2937;
+    --text-dark: #e5e7eb;
+    --text-light: #9ca3af;
+    --border-color: #374151;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 32px rgba(0, 0, 0, 0.5);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Navbar always dark */
+    --navbar-bg: rgba(10, 14, 23, 0.97);
+    --navbar-scrolled-bg: rgba(10, 14, 23, 1);
+    --navbar-text: #e5e7eb;
+    --navbar-logo: #4da6ff;
+    --card-bg: #1f2937;
+    --section-alt-bg: rgba(77, 166, 255, 0.04);
+    --form-bg: rgba(77, 166, 255, 0.08);
+    --input-bg: #1f2937;
+    --modal-bg: #1f2937;
+}
+
+/* Light Mode Overrides */
+body.light-mode {
     --primary-color: #007bff;
     --secondary-color: #0056b3;
     --accent-color: #e7f1ff;
     --white: #ffffff;
+    --true-white: #ffffff;
     --light-bg: #f8f9fa;
     --text-dark: #1a1a1a;
     --text-light: #666666;
@@ -11,7 +39,16 @@
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 32px rgba(0, 0, 0, 0.12);
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Navbar ALWAYS stays dark even in light mode */
+    --navbar-bg: rgba(10, 14, 23, 0.97);
+    --navbar-scrolled-bg: rgba(10, 14, 23, 1);
+    --navbar-text: #e5e7eb;
+    --navbar-logo: #4da6ff;
+    --card-bg: #ffffff;
+    --section-alt-bg: rgba(0, 123, 255, 0.03);
+    --form-bg: linear-gradient(135deg, #e7f1ff, rgba(0, 123, 255, 0.08));
+    --input-bg: #ffffff;
+    --modal-bg: #ffffff;
 }
 
 /* Global Styles */
@@ -127,22 +164,22 @@ button {
     opacity: 0;
 }
 
-/* Navigation */
+/* Navigation — always dark regardless of theme */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: var(--navbar-bg);
+    backdrop-filter: blur(12px);
     z-index: 1000;
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
     transition: var(--transition);
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: var(--shadow-md);
+    background: var(--navbar-scrolled-bg);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
 }
 
 .nav-wrapper {
@@ -158,7 +195,7 @@ button {
     gap: 0.5rem;
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--navbar-logo);
     transition: var(--transition);
 }
 
@@ -177,14 +214,18 @@ button {
 }
 
 .nav-links a {
-    color: var(--text-dark);
+    color: var(--navbar-text);
     font-weight: 500;
     transition: var(--transition);
     position: relative;
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
+    color: var(--navbar-logo);
+}
+
+.nav-links a.active {
+    color: var(--navbar-logo);
 }
 
 .nav-links a::after {
@@ -194,11 +235,12 @@ button {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--primary-color);
+    background: var(--navbar-logo);
     transition: var(--transition);
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
     width: 100%;
 }
 
@@ -212,9 +254,33 @@ button {
 .mobile-menu-btn span {
     width: 25px;
     height: 3px;
-    background: var(--text-dark);
+    background: var(--navbar-text);
     border-radius: 2px;
     transition: var(--transition);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--navbar-text);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+    background: rgba(77, 166, 255, 0.2);
+    border-color: var(--navbar-logo);
+    color: var(--navbar-logo);
+    transform: rotate(20deg) scale(1.1);
 }
 
 /* Buttons */
@@ -232,7 +298,7 @@ button {
 
 .btn-primary {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--white);
+    color: var(--true-white);
     box-shadow: var(--shadow-md);
 }
 
@@ -249,11 +315,12 @@ button {
     background: var(--accent-color);
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
+    font-weight: 600;
 }
 
 .btn-secondary:hover {
     background: var(--primary-color);
-    color: var(--white);
+    color: var(--true-white);
 }
 
 .loading-spinner {
@@ -427,7 +494,7 @@ button {
 }
 
 .program-card {
-    background: var(--white);
+    background: var(--card-bg);
     border: 2px solid var(--border-color);
     border-radius: 16px;
     padding: 2rem;
@@ -488,50 +555,53 @@ button {
 /* Faculty Section */
 .faculty {
     padding: 6rem 0;
-    background: linear-gradient(135deg, rgba(0, 123, 255, 0.03), rgba(0, 123, 255, 0.01));
+    background: var(--section-alt-bg);
 }
 
 .faculty-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(2, minmax(280px, 420px));
+    gap: 2.5rem;
+    justify-content: center;
 }
 
 .faculty-card {
-    background: var(--white);
+    background: var(--card-bg);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: var(--transition);
     animation: fadeIn 0.8s ease-out forwards;
     opacity: 0;
+    border: 1px solid var(--border-color);
 }
 
 .faculty-card:hover {
     box-shadow: var(--shadow-lg);
     transform: translateY(-8px);
+    border-color: var(--primary-color);
 }
 
 .faculty-image {
-    height: 200px;
-    background: linear-gradient(135deg, var(--accent-color), rgba(0, 123, 255, 0.08));
+    height: 220px;
+    background: linear-gradient(135deg, var(--accent-color), rgba(77, 166, 255, 0.08));
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .image-placeholder {
-    font-size: 4rem;
+    font-size: 5rem;
     color: var(--primary-color);
     opacity: 0.7;
 }
 
 .faculty-info {
-    padding: 1.5rem;
+    padding: 1.75rem;
 }
 
 .faculty-info h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--text-dark);
     margin-bottom: 0.5rem;
 }
@@ -550,9 +620,14 @@ button {
 }
 
 .subject-taught {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: var(--text-light);
     font-style: italic;
+    display: inline-block;
+    background: var(--accent-color);
+    padding: 0.2rem 0.7rem;
+    border-radius: 20px;
+    margin-top: 0.25rem;
 }
 
 /* Features Section */
@@ -560,6 +635,7 @@ button {
     padding: 6rem 0;
     background: var(--white);
 }
+
 
 .features-grid {
     display: grid;
@@ -606,7 +682,7 @@ button {
 /* Reviews Section */
 .reviews {
     padding: 6rem 0;
-    background: linear-gradient(135deg, rgba(0, 123, 255, 0.03), rgba(0, 123, 255, 0.01));
+    background: var(--section-alt-bg);
 }
 
 .reviews-grid {
@@ -617,13 +693,14 @@ button {
 }
 
 .review-card {
-    background: var(--white);
+    background: var(--card-bg);
     border-radius: 12px;
     padding: 2rem;
     box-shadow: var(--shadow-md);
     transition: var(--transition);
     animation: fadeIn 0.8s ease-out forwards;
     opacity: 0;
+    border: 1px solid var(--border-color);
 }
 
 .review-card:hover {
@@ -663,6 +740,7 @@ button {
     padding: 6rem 0;
     background: var(--white);
 }
+
 
 .contact-wrapper {
     display: grid;
@@ -711,7 +789,7 @@ button {
 
 /* Contact Form */
 .contact-form {
-    background: linear-gradient(135deg, var(--accent-color), rgba(0, 123, 255, 0.08));
+    background: var(--form-bg);
     padding: 2rem;
     border-radius: 16px;
     display: flex;
@@ -735,7 +813,7 @@ button {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     transition: var(--transition);
-    background: var(--white);
+    background: var(--input-bg);
     color: var(--text-dark);
 }
 
@@ -814,7 +892,7 @@ button {
 }
 
 .modal-content {
-    background: var(--white);
+    background: var(--modal-bg);
     border-radius: 16px;
     padding: 2rem;
     max-width: 500px;
@@ -822,6 +900,7 @@ button {
     position: relative;
     animation: scaleIn 0.3s ease-out;
     box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
 }
 
 .modal-close {
@@ -888,7 +967,7 @@ button {
     bottom: 2rem;
     right: 2rem;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--white);
+    color: var(--true-white);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -914,10 +993,10 @@ button {
     font-size: 1.8rem;
 }
 
-/* Footer */
+/* Footer — always dark regardless of theme */
 .footer {
-    background: linear-gradient(135deg, var(--text-dark), #2a2a2a);
-    color: var(--white);
+    background: linear-gradient(135deg, #1a1f2e, #0d1117);
+    color: var(--true-white);
     padding: 3rem 0 1rem;
 }
 
@@ -930,7 +1009,9 @@ button {
 
 .footer-section h4 {
     margin-bottom: 1rem;
-    color: var(--white);
+    color: var(--true-white);
+    font-size: 1rem;
+    letter-spacing: 0.03em;
 }
 
 .footer-section p {

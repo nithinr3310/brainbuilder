@@ -9,7 +9,7 @@
         top: 70px;
         left: 0;
         width: 100%;
-        background: var(--white);
+        background: rgba(10, 14, 23, 0.98); /* Always dark, matching navbar */
         flex-direction: column;
         gap: 0;
         list-style: none;
@@ -24,7 +24,8 @@
     .nav-links a {
         display: block;
         padding: 1rem;
-        border-bottom: 1px solid var(--border-color);
+        color: var(--navbar-text);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .mobile-menu-btn {
@@ -433,8 +434,9 @@
     }
 
     .faculty-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, minmax(280px, 420px));
         gap: 2.5rem;
+        justify-content: center;
     }
 }
 
@@ -475,42 +477,6 @@
     }
 }
 
-/* Dark Mode (optional) */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --white: #1a1a1a;
-        --light-bg: #2a2a2a;
-        --text-dark: #e0e0e0;
-        --text-light: #b0b0b0;
-        --border-color: #3a3a3a;
-    }
-
-    .navbar {
-        background: rgba(26, 26, 26, 0.95);
-    }
-
-    .hero {
-        background: linear-gradient(135deg, rgba(0, 123, 255, 0.1) 0%, rgba(0, 123, 255, 0.05) 100%);
-    }
-
-    .program-card,
-    .faculty-card,
-    .review-card {
-        background: #2a2a2a;
-    }
-
-    .contact-form {
-        background: linear-gradient(135deg, rgba(0, 123, 255, 0.15), rgba(0, 123, 255, 0.1));
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        background: #3a3a3a;
-        color: #e0e0e0;
-    }
-
-    .modal-content {
-        background: #2a2a2a;
-    }
-}
+/* Dark mode is handled via body.light-mode class toggling in styles.css.
+   OS-level prefers-color-scheme is intentionally not used here to avoid
+   conflicts with the manual theme toggle. */
