@@ -44,36 +44,53 @@
         transform: rotate(-45deg) translateY(-10px);
     }
 
-    /* Hero Section */
+    /* Pin hero to top on mobile — centers it vertically by default which pushes h1 out of view */
+    .hero {
+        overflow: visible;
+        align-items: flex-start;
+        padding-top: 2.5rem;
+    }
+
+    /* Stack: text on top, image below */
     .hero-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 2rem 0;
+        gap: 1.5rem;
+        padding: 1rem 0 2rem;
+        overflow: visible;
+    }
+
+    .hero-text {
+        order: 1;
+        text-align: center;
+        width: 100%;
+        overflow: visible;
     }
 
     .hero-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .hero-tagline {
-        font-size: 1rem;
+        width: 100%;
+        overflow: visible;
+        word-break: break-word;
+        white-space: normal;
     }
 
     .hero-image {
-        margin-top: 2rem;
+        order: 2;
+        margin-top: 0;
     }
 
-    .illustration {
-        width: 250px;
-        height: 300px;
+    /* Promo image: oval portrait on tablet */
+    .hero-promo-wrapper {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        animation: none; /* disable float on touch devices */
     }
 
-    .student-icon {
-        font-size: 6rem;
+    .hero-promo-img {
+        max-width: 300px;
+        height: 360px;
+        border-radius: 50% 50% 44% 44% / 42% 42% 58% 58%;
+        object-position: 50% 10%;
     }
 
     /* Programs Section */
@@ -131,18 +148,23 @@
     }
 
     /* Navigation */
-    .logo {
-        font-size: 1.2rem;
+    .logo-badge {
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
     }
 
-    .logo i {
-        font-size: 1.5rem;
+    .logo-text {
+        font-size: 1.1rem;
     }
 
     /* Hero Section */
     .hero {
         margin-top: 60px;
-        min-height: 80vh;
+        min-height: auto;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        align-items: flex-start;
     }
 
     .hero-text h1 {
@@ -157,17 +179,27 @@
         font-size: 0.9rem;
     }
 
-    .illustration {
-        width: 200px;
-        height: 250px;
+    /* Promo image on small mobile — tighter oval */
+    .hero-promo-wrapper {
+        max-width: 240px;
     }
 
-    .student-icon {
-        font-size: 4rem;
+    .hero-promo-img {
+        max-width: 240px;
+        height: 280px;
+        border-radius: 50% 50% 44% 44% / 42% 42% 58% 58%;
     }
 
-    .books-floating i {
-        font-size: 1.2rem;
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-tagline {
+        font-size: 0.9rem;
     }
 
     /* Buttons */

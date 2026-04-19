@@ -102,7 +102,7 @@ document.querySelectorAll('.program-card, .faculty-card, .feature-item, .review-
 
 const chatbotPlaceholder = document.getElementById('chatbotPlaceholder');
 chatbotPlaceholder.addEventListener('click', () => {
-    alert('Chat support feature coming soon! 💬\n\nFor now, please contact us via:\n📞 +91 98765 43210\n💬 WhatsApp Chat');
+    alert('Chat support feature coming soon! 💬\n\nFor now, please contact us via:\n📞 +91 8248727875\n💬 WhatsApp Chat');
 });
 
 // ==================== Add hover effect to cards ====================
